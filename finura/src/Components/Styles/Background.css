@@ -1,9 +1,0 @@
-.background{
-    position: absolute;
-    z-index: -1;    
-    width: 100%;
-    opacity: 0.5;
-    mix-blend-mode: screen;
-    filter: blur(0.5  px);
-    margin-top: 8vh;
-}

@@ -1,8 +1,8 @@
-import { useState } from 'react'
 
 
+import {NextUIProvider} from '@nextui-org/react'
 
-import { Landing } from './Pages/Landing'
+import  Landing  from './Pages/Landing'
 
 function App() {
 
