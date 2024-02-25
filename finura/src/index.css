@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
+:root {
 
-    --font-main : "Red Hat Display", sans-serif;
+    --font-main: "Red Hat Display", sans-serif;
 }
 
-.font-main{
+.font-main {
     font-family: var(--font-main);
-   
+
 }
