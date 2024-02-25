@@ -19,7 +19,7 @@ const Landing = () => {
 
 
         <div className="welcome font-main text-2xl md:text-4xl mt-8  font-bold  md:leading-snug  text-center px-10 ">
-          Hey, Wanderer! <br /> <span className='text-4xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-br from-teal-600 via-cyan-700 to-emerald-600 '> Dreaming Big? </span>
+          Hey, Wanderer! <br /> <span className='text-4xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-br from-finuradark via-finuramain to-finuradark '> Dreaming Big? </span>
           <br /> Let's make it real together!!
         </div>
 
@@ -32,7 +32,7 @@ const Landing = () => {
           label:" text-finuradark text-md font-semibold",
           input:"text-lg"
         }}/>
-              <Button  className="border-2 bg-finuramain text-white font-medium w-2/4 max-w-[30em]  ">
+              <Button  className="border-2 bg-finuramain text-white font-semibold w-2/4 max-w-[30em]   ">
         Let's Dive In!
       </Button>
         
