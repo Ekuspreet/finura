@@ -1,14 +1,12 @@
 
-
-import {NextUIProvider} from '@nextui-org/react'
-
+import Homepage from './Pages/Homepage'
 import  Landing  from './Pages/Landing'
 
 function App() {
 
   return (
     <>
-     <Landing/>
+     <Homepage/>
     </>
   )
 }
