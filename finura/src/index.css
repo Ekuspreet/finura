@@ -6,7 +6,9 @@
 
     --font-main: "Red Hat Display", sans-serif;
 }
-
+*{
+    font-family: var(--font-main);
+}
 .font-main {
     font-family: var(--font-main);
 
