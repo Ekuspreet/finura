@@ -3,9 +3,21 @@ import finura_icon from '../Assets/finura_icon.png'
 import finura from '../Assets/logo.png'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Image } from "@nextui-org/react";
 import SoftwareBox from '../Components/SoftwareBox';
+import { useLocation } from 'react-router-dom';
 const Homepage = () => {
 
     const [username, setUsername] = useState("Guest")
+        
+    const location = useLocation()
+    
+    useEffect( ()=>{
+    
+        if(location.state && location.state.name){
+            setUsername(location.state.name)
+        }
+    },[]
+
+    )
     const softwares = [
         {
             app_name: "Adobe Photoshop",
@@ -75,7 +87,7 @@ const Homepage = () => {
                     Softwares We Work In
                 </div>
 
-                <div className="software-content flex gap-5 flex-wrap  md:w-6/12 items-center">
+                <div className="software-content flex gap-5 flex-wrap  md:w-6/12 items-center justify-center">
                     {softwares.map((software) => (
                         <SoftwareBox name = {software.app_name} url = {software.image_link}/>
                         ))

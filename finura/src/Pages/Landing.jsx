@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 // import herobg from "../Assets/herobg.jpg";
 import logo from "../Assets/logo.png";
 import { Input, Button } from "@nextui-org/react";
+import { useNavigate } from "react-router-dom";
 const Landing = () => {
-  const [isVisible, setIsVisible] = React.useState(false);
-
+  const [isVisible, setIsVisible] = useState(false);
+  const [username, setUsername] = useState("")
   const toggleVisibility = () => setIsVisible(!isVisible);
-
+  const nav = useNavigate()
+  function toMain(){
+    const dataToSend = {
+      name : username
+    }
+    nav('/homepage', { state : dataToSend} )
+  }
   return (
     <>
       <div className="content z-1 mt-4">
@@ -29,8 +36,11 @@ const Landing = () => {
           inputWrapper:["bg-white-100 border-1"],
           label:" text-finuradark text-md font-semibold",
           input:"text-lg"
-        }}/>
-              <Button  className="border-2 bg-finuramain text-white font-semibold w-2/4 max-w-[30em]   ">
+        }}
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+              <Button  onClick={toMain} className="border-2 bg-finuramain text-white font-semibold w-2/4 max-w-[30em]   ">
         Let's Dive In!
       </Button>
         

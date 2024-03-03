@@ -9,8 +9,9 @@ const SoftwareBox = ({name, url}) => {
     <CardBody className="overflow-visible py-2">
       <Image
         alt="Card background"
-        className="object-cover rounded-xl w-20 md:w-48 "
+        className="object-cover rounded-xl w-20 md:w-36 "
         src={url}
+        
       />
     </CardBody>
   </Card>
