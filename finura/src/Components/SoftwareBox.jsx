@@ -1,19 +1,16 @@
 import React from 'react'
-import {Card, CardHeader, CardBody, Image} from "@nextui-org/react";
+import {Card, CardBody, Image} from "@nextui-org/react";
 const SoftwareBox = ({name, url}) => {
   return (
     <div>
-    <Card className="py-4 w-fit">
-    <CardHeader className=" mx-auto flex-col items-start">
-      
-      <h4 className="font-bold text-large text-center">Adobe Photoshop</h4>
-    </CardHeader>
+    <Card className="py-4 px-2 w-fit">
+    
+    <div className=' text-tiny md:text-large font-semibold '>{name}</div>
     <CardBody className="overflow-visible py-2">
       <Image
         alt="Card background"
-        className="object-cover rounded-xl"
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/2101px-Adobe_Photoshop_CC_icon.svg.png"
-        width={200}
+        className="object-cover rounded-xl w-20 md:w-48 "
+        src={url}
       />
     </CardBody>
   </Card>
