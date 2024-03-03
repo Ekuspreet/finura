@@ -42,6 +42,10 @@ const Homepage = () => {
         {
             app_name: "Figma",
             image_link: "https://miro.medium.com/v2/resize:fit:1400/1*6XgfDCVn81AYX68Xvd2I-g@2x.png"
+        },
+        {
+            app_name: "Indesign",
+            image_link: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Adobe_InDesign_CC_icon.svg/800px-Adobe_InDesign_CC_icon.svg.png"
         }
     ]
 
