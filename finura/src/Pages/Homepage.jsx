@@ -1,9 +1,9 @@
 import { React, useEffect, useState } from 'react'
-import finura_icon from '../Assets/finura_icon.png'
 import finura from '../Assets/logo.png'
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Image } from "@nextui-org/react";
 import SoftwareBox from '../Components/SoftwareBox';
 import { useLocation } from 'react-router-dom';
+import Navigation from '../Components/Navigation';
+import { Image } from '@nextui-org/react';
 const Homepage = () => {
 
     const [username, setUsername] = useState("Guest")
@@ -47,27 +47,8 @@ const Homepage = () => {
 
     return (
         <div>
-            <Navbar shouldHideOnScroll className='py-2'>
-                <NavbarBrand className='mt-2'>
-                    <Image src={finura_icon} width={45} isBlurred></Image>
-
-                </NavbarBrand>
-                <NavbarContent justify='right'>
-                    <NavbarItem>
-                        <Link>
-                            <Button size='md' className='bg-transparent hover:border-1 border-finuramain  text-finuradark font-bold'>About Us</Button>
-
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem>
-                        <Link>
-                            <Button size='md' className=' sticky top-0  bg-gradient-to-tr from-finuracontrast  to-finuramain text-white font-bold'>Hire Us</Button>
-
-                        </Link>
-                    </NavbarItem>
-                </NavbarContent>
-            </Navbar>
-
+           
+        <Navigation/>
 
 
             <div className="relative Hero py-8 text-xl md:gap-3 md:text-2xl flex flex-col items-center text-center" >
