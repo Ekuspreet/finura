@@ -34,7 +34,7 @@ const Hireus = () => {
     var config = {
       method: "POST",
       url: discordWebhookUrl,
-      headers: { "Content-Type": "multipart/form-data" },
+      headers: { "Content-Type": "application/json" },
       data: message,
     };
 
