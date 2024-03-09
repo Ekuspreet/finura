@@ -4,6 +4,7 @@ import SoftwareBox from '../Components/SoftwareBox';
 import { useLocation } from 'react-router-dom';
 import Navigation from '../Components/Navigation';
 import { Image } from '@nextui-org/react';
+import Logos from '../Components/Logos';
 const Homepage = () => {
 
     const [username, setUsername] = useState("Guest")
@@ -80,8 +81,8 @@ const Homepage = () => {
                 </div>
             </div>
 
-
-
+                <hr />
+                    <Logos/>
 
         </div>
     )
