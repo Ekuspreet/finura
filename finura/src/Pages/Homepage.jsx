@@ -74,8 +74,8 @@ const Homepage = () => {
                 </div>
 
                 <div className="software-content flex gap-5 flex-wrap  md:w-6/12 items-center justify-center">
-                    {softwares.map((software) => (
-                        <SoftwareBox name = {software.app_name} url = {software.image_link}/>
+                    {softwares.map((software,index) => (
+                        <SoftwareBox key={index} name = {software.app_name} url = {software.image_link}/>
                         ))
                     }
                 </div>
