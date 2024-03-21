@@ -1,24 +1,19 @@
-import { React, useEffect, useState } from 'react'
+import { React, useEffect, useContext } from 'react'
 import finura from '../Assets/logo.png'
 import SoftwareBox from '../Components/SoftwareBox';
 import { useLocation } from 'react-router-dom';
 import Navigation from '../Components/Navigation';
 import { Image } from '@nextui-org/react';
 import Logos from '../Components/Logos';
+import { UserContext } from '../App';
 const Homepage = () => {
 
-    const [username, setUsername] = useState("Guest")
-        
-    const location = useLocation()
-    
-    useEffect( ()=>{
-    
-        if(location.state && location.state.name){
-            setUsername(location.state.name)
-        }
-    },[]
+    const [username, setUsername] = useContext(UserContext);
 
-    )
+        
+  
+    
+
     const softwares = [
         {
             app_name: "Adobe Photoshop",
