@@ -1,23 +1,19 @@
-import { React, useEffect, useState } from 'react'
+import { React, useEffect, useContext } from 'react'
 import finura from '../Assets/logo.png'
 import SoftwareBox from '../Components/SoftwareBox';
 import { useLocation } from 'react-router-dom';
 import Navigation from '../Components/Navigation';
 import { Image } from '@nextui-org/react';
+import Logos from '../Components/Logos';
+import { UserContext } from '../App';
 const Homepage = () => {
 
-    const [username, setUsername] = useState("Guest")
-        
-    const location = useLocation()
-    
-    useEffect( ()=>{
-    
-        if(location.state && location.state.name){
-            setUsername(location.state.name)
-        }
-    },[]
+    const [username, setUsername] = useContext(UserContext);
 
-    )
+        
+  
+    
+
     const softwares = [
         {
             app_name: "Adobe Photoshop",
@@ -73,15 +69,15 @@ const Homepage = () => {
                 </div>
 
                 <div className="software-content flex gap-5 flex-wrap  md:w-6/12 items-center justify-center">
-                    {softwares.map((software) => (
-                        <SoftwareBox name = {software.app_name} url = {software.image_link}/>
+                    {softwares.map((software,index) => (
+                        <SoftwareBox key={index} name = {software.app_name} url = {software.image_link}/>
                         ))
                     }
                 </div>
             </div>
 
-
-
+                <hr />
+                    <Logos/>
 
         </div>
     )

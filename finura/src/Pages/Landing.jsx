@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 // import herobg from "../Assets/herobg.jpg";
 import logo from "../Assets/logo.png";
+import { UserContext } from "../App";
 import { Input, Button } from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
 const Landing = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [username, setUsername] = useState("")
-  const toggleVisibility = () => setIsVisible(!isVisible);
+
+  const [username, setUsername] = useContext(UserContext);
   const nav = useNavigate()
   function toMain(){
-    const dataToSend = {
-      name : username
-    }
-    nav('/homepage', { state : dataToSend} )
+    nav('/homepage' )
   }
   return (
     <>

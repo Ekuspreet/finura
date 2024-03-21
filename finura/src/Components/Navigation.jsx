@@ -16,13 +16,13 @@ const Navigation = () => {
                 <NavbarContent justify='right'>
                     <NavbarItem>
                         <Link to={"/about"}>
-                            <Button size='md' className='bg-transparent hover:border-1 border-finuramain  text-finuradark font-bold'>About Us</Button>
+                            <button size='md' className='bg-transparent hover:border-1 border-finuramain  text-finuradark font-bold p-2 rounded-lg box-border '>About Us</button>
 
                         </Link>
                     </NavbarItem>
                     <NavbarItem>
                         <Link to={"/hire"}>
-                            <Button size='md' className=' sticky top-0  bg-gradient-to-tr from-finuracontrast  to-finuramain text-white font-bold'>Hire Us</Button>
+                            <button size='md ' className=' sticky top-0 bg-gradient-to-tr from-finuracontrast to-finuramain text-white font-bold p-2 rounded-lg hover:bg-gradient-to-bl hover:from-finuracontrast hover:to-finuramain transition duration-300'>Hire Us</button>
 
                         </Link>
                     </NavbarItem>

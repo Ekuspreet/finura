@@ -1,9 +1,9 @@
 import React from 'react'
 import {Card, CardBody, Image} from "@nextui-org/react";
-const SoftwareBox = ({name, url}) => {
+const SoftwareBox = ({index, name, url}) => {
   return (
     <div>
-    <Card className="py-4 px-2 w-fit">
+    <Card key={index} className="py-4 px-2 w-fit">
     
     <div className=' text-tiny md:text-large font-semibold '>{name}</div>
     <CardBody className="overflow-visible py-2">
