@@ -1,16 +1,24 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 // import herobg from "../Assets/herobg.jpg";
 import logo from "../Assets/logo.png";
 import { UserContext } from "../App";
 import { Input, Button } from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
+import Cookie from 'js-cookie'
 const Landing = () => {
 
   const [username, setUsername] = useContext(UserContext);
   const nav = useNavigate()
   function toMain(){
+    Cookie.set('finura_username',username)
     nav('/homepage' )
   }
+  useEffect(()=>{
+    if(Cookie.get('finura_username')){
+      nav('/homepage')
+    }
+    
+  },[])
   return (
     <>
       <div className="content z-1 mt-4">

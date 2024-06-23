@@ -3,11 +3,15 @@ import Navigation from '../Components/Navigation'
 import { Input, Image, Textarea, Button } from "@nextui-org/react";
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure} from "@nextui-org/react";
 
+import Cookie from 'js-cookie';
+
 import happyman from '../Assets/Data/happyman.avif'
 import axios from 'axios'
 const Hireus = () => {
   const hiddenButton = useRef(null)
-  const [formData, setFormData] = useState({})
+  const [formData, setFormData] = useState({
+    'name': Cookie.get('finura_username'),
+  })
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
   const discordWebhookUrl = `https://discord.com/api/webhooks/${import.meta.env.VITE_WEBHOOK_ID}/${import.meta.env.VITE_WEBHOOK_TOKEN}`
 
