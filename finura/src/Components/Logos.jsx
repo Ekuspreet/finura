@@ -8,7 +8,7 @@ const Logos = () => {
                 Logo Designs
         </div>
         <div className="logos w-10/12 px-5  md:px-20 flex flex-wrap justify-evenly gap-4 md:gap-8">
-             <FetchLogos/>
+             {/* <FetchLogos/> */}
             
         </div>
     </div>
