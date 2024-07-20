@@ -13,6 +13,7 @@ const Hireus = () => {
     'name': Cookie.get('finura_username'),
   })
   const {isOpen, onOpen, onOpenChange} = useDisclosure();
+ 
   const discordWebhookUrl = `https://discord.com/api/webhooks/${import.meta.env.VITE_WEBHOOK_ID}/${import.meta.env.VITE_WEBHOOK_TOKEN}`
 
 

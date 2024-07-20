@@ -94,8 +94,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <hr />
-      <Logos />
+      
     </div>
   );
 };
