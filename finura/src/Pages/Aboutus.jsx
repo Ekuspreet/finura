@@ -82,7 +82,7 @@ const Aboutus = () => {
             </div>
             <div className="details pl-5 lg:pt-10  lg:pl-10  py-5 w-full ">
               <h1 className="text-2xl lg:text-4xl font-bold text-finuramain">
-                {member.name}, {member.age}
+                {member.name}
               </h1>
               <h3 className="text-lg lg:text-2xl font-semibold text-gray-500">
                 {member.position}

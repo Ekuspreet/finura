@@ -1,14 +1,13 @@
-import { React, useEffect, useContext } from "react";
+import { React } from "react";
 import finura from "../Assets/logo.png";
 import SoftwareBox from "../Components/SoftwareBox";
-import { useLocation } from "react-router-dom";
 import Navigation from "../Components/Navigation";
 import { Image } from "@nextui-org/react";
-import Logos from "../Components/Logos";
 import Cookie from "js-cookie";
+import Logos from "../Components/Logos";
 const Homepage = () => {
-  let username = Cookie.get("finura_username");
- 
+  let username = Cookie.get("finura_username") || "Guest";
+
 
   const softwares = [
     {
@@ -49,22 +48,25 @@ const Homepage = () => {
   ];
 
   return (
-    <div>
+    <div >
+      {/* Navbar */}
       <Navigation />
+      {/* Heading */}
+      <div className="relative Hero py-8 text-xl md:gap-3 md:text-2xl flex flex-col items-center ">
 
-      <div className="relative Hero py-8 text-xl md:gap-3 md:text-2xl flex flex-col items-center text-center">
-        {/* <Image className='absolute' width={100} height={100} src='https://storage.pixteller.com/designs/designs-images/2019-03-27/05/love-and-passion-background-backgrounds-romantic-1-5c9b9945866ba.png' ></Image> */}
-        <div className="text-2xl md:text-4xl ">
-          Welcome,
-          <span className=" font-bold text-transparent bg-clip-text bg-gradient-to-br from-finuradark via-finuramain to-finuradark">
-            {" "}
-            {username}
-          </span>
-        </div>
         <br />
-        <Image className="" src={finura} width={500}></Image>
+        <Image className=" " src={finura} width={500}></Image>
         <br />
+        {/* Information */}
         <div className="sm:w-6/12 w-10/12 text-justify mt-2 md:mt-0 ">
+          <div className="text-2xl md:text-4xl font-semibold ">
+            Welcome
+            <span className=" font-bold text-transparent bg-clip-text bg-gradient-to-br from-finuradark via-finuramain to-finuradark">
+              {" "}
+              {username},
+            </span>
+          </div>
+
           We are a graphic design and branding studio based in Ludhiana, Punjab,
           India. We specialize in adding nuance and meaning to the designs that
           satisfy
@@ -72,12 +74,12 @@ const Homepage = () => {
             {" "}
             your{" "}
           </span>
-          requirements. 
+          requirements.
         </div>
       </div>
 
       <hr />
-
+      {/* Softwares We Work In */}
       <div className="softwares text-center py-8 flex flex-col items-center gap-4">
         <div className="heading text-xl font-bold text-finuradark md:text-2xl">
           Softwares We Work In
@@ -93,8 +95,22 @@ const Homepage = () => {
           ))}
         </div>
       </div>
+      <hr />
 
-      
+      {/* Portfolio Starts Here */}
+      {/* Logo Designs */}
+
+      <div className="portfolio  py-8 flex flex-col items-center gap-4 ">
+        <div className="heading text-xl  font-bold text-finuradark md:text-2xl">
+          Design Portfolio
+        </div>
+          <section className="px-3 w-9/12 ">
+            <div className="heading text-xl font-semibold text-finuracontrast">Logo Designs</div>
+            <div className="logos">
+              <Logos />
+            </div>
+          </section>
+      </div>
     </div>
   );
 };
