@@ -1,11 +1,6 @@
-import React from 'react'
-import FetchLogos from './util/FetchLogos'
+// import FetchLogos from './util/FetchLogos'
 const Logos = () => {
-    
-  return (
-    <>
-    </>
-  )
-}
+  return <></>;
+};
 
-export default Logos
+export default Logos;
