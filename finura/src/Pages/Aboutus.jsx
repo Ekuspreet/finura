@@ -54,22 +54,22 @@ const Aboutus = () => {
         About Us
       </div> */}
 
-      <div className="  pb-8  mx-8 text-xl font-semibold md:text-2xl text-center">
+      <div className="mx-8 pb-8 text-center text-xl font-semibold md:text-2xl">
         {" "}
         Currently, Team{" "}
-        <span className="font-bold text-transparent bg-clip-text bg-gradient-to-br from-finuradark via-finuramain to-finuradark">
+        <span className="bg-gradient-to-br from-finuradark via-finuramain to-finuradark bg-clip-text font-bold text-transparent">
           Finura is {members.length}{" "}
         </span>{" "}
         Member{members.length > 1 && "s"} Strong
       </div>
 
-      <div className="members  px-8 mb-20 lg:w-full flex flex-col items-center gap-8">
+      <div className="members mb-20 flex flex-col items-center gap-8 px-8 lg:w-full">
         {members.map((member, index) => (
           <div
             key={index}
-            className="member p-2 rounded-3xl  flex flex-col lg:flex-row border-2  w-full sm:w-8/12 md:w-6/12 lg:w-10/12 items-stretch"
+            className="member flex w-full flex-col items-stretch rounded-3xl border-2 p-2 sm:w-8/12 md:w-6/12 lg:w-10/12 lg:flex-row"
           >
-            <div className="image ">
+            <div className="image">
               <Image
                 classNames={{
                   img: "h-[full] w-96 object-cover rounded-2xl ",
@@ -80,30 +80,30 @@ const Aboutus = () => {
                 alt={member.name}
               />
             </div>
-            <div className="details pl-5 lg:pt-10  lg:pl-10  py-5 w-full ">
-              <h1 className="text-2xl lg:text-4xl font-bold text-finuramain">
+            <div className="details w-full py-5 pl-5 lg:pl-10 lg:pt-10">
+              <h1 className="text-2xl font-bold text-finuramain lg:text-4xl">
                 {member.name}
               </h1>
-              <h3 className="text-lg lg:text-2xl font-semibold text-gray-500">
+              <h3 className="text-lg font-semibold text-gray-500 lg:text-2xl">
                 {member.position}
               </h3>
-              <p className="mt-2  lg:mt-4 text-base lg:text-lg leading-6 text-justify">
+              <p className="mt-2 text-justify text-base leading-6 lg:mt-4 lg:text-lg">
                 {member.intro}
               </p>
-              <h3 className="mt-2 lg:mt-4 text-lg lg:text-base">
+              <h3 className="mt-2 text-lg lg:mt-4 lg:text-base">
                 My Hobbies Include..
               </h3>
               <div className="hobbies flex flex-wrap gap-3">
                 {member.hobbies.map((hobby, index) => (
                   <div
                     key={index}
-                    className="hobby border-2 border-finuracontrast py-1 px-2 rounded text-finuradark font-semibold"
+                    className="hobby rounded border-2 border-finuracontrast px-2 py-1 font-semibold text-finuradark"
                   >
                     {hobby}
                   </div>
                 ))}
               </div>
-              <h3 className="mt-2 lg:mt-4 text-lg lg:text-base">
+              <h3 className="mt-2 text-lg lg:mt-4 lg:text-base">
                 Connect With Me
               </h3>
               <div className="socials flex gap-5">

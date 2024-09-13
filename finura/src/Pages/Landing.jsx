@@ -16,6 +16,7 @@ const Landing = () => {
     if (Cookie.get("finura_username")) {
       nav("/homepage");
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>

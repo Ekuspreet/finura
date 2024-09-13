@@ -39,6 +39,53 @@ export const softwares = [
   },
 ];
 
+export const Brand_stories = [
+  {
+    brand_name: "Adobe",
+    avatar:
+      "https://fastly.picsum.photos/id/531/100/100.jpg?hmac=PHgpmwwSMI65HfQqPFMCiSW40yf4d9bMo3eDYJDO0Og",
+    stories: [
+      {
+        url: "https://fastly.picsum.photos/id/500/1080/1920.jpg?hmac=c5KmPJgpiMvdGybaFFj6e41PW0mRyf0OrHTPG8qT9zw",
+        duration: 5000,
+        header: {
+          heading: "Mohit Karekar",
+          subheading: "Posted 30m ago",
+        },
+      },
+      {
+        url: "https://fastly.picsum.photos/id/500/1080/1920.jpg?hmac=c5KmPJgpiMvdGybaFFj6e41PW0mRyf0OrHTPG8qT9zw",
+        duration: 2000,
+        seeMore: ({ close }) => {
+          return <div onClick={close}>Hello, click to close this.</div>;
+        },
+      },
+    ],
+  },
+  {
+    brand_name: "Google",
+    avatar:
+      "https://fastly.picsum.photos/id/532/100/100.jpg?hmac=PHgpmwwSMI65HfQqPFMCiSW40yf4d9bMo3eDYJDO0Og",
+    stories: [
+      {
+        url: "https://fastly.picsum.photos/id/500/1080/1920.jpg?hmac=c5KmPJgpiMvdGybaFFj6e41PW0mRyf0OrHTPG8qT9zw",
+        duration: 5000,
+        header: {
+          heading: "Mohit Karekar",
+          subheading: "Posted 30m ago",
+        },
+      },
+      {
+        url: "https://fastly.picsum.photos/id/500/1080/1920.jpg?hmac=c5KmPJgpiMvdGybaFFj6e41PW0mRyf0OrHTPG8qT9zw",
+        duration: 2000,
+        seeMore: ({ close }) => {
+          return <div onClick={close}>Hello, click to close this.</div>;
+        },
+      },
+    ],
+  },
+];
+
 export const Logo_design = [
   "https://res.cloudinary.com/dluoi096b/image/upload/v1724175036/logo-5f257f5d_ehlwdg.png",
 ];

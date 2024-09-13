@@ -1,10 +1,9 @@
-
-import { createContext, useState } from 'react';
-import Aboutus from './Pages/Aboutus';
-import Hireus from './Pages/Hireus';
-import Homepage from './Pages/Homepage'
-import  Landing  from './Pages/Landing'
-import { Routes, Route } from 'react-router-dom';
+import { createContext, useState } from "react";
+import Aboutus from "./Pages/Aboutus";
+import Hireus from "./Pages/Hireus";
+import Homepage from "./Pages/Homepage";
+import Landing from "./Pages/Landing";
+import { Routes, Route } from "react-router-dom";
 
 const UserContext = createContext();
 function App() {
@@ -12,18 +11,18 @@ function App() {
 
   return (
     <>
-    <UserContext.Provider value={[username, setUsername]}>  
-    <Routes>
-      <Route path='/' element={<Landing/>} exact />
-      <Route path='/homepage' element={<Homepage/>} exact  />
-      <Route path="/about"  element={<Aboutus/> }  exact  />
-      <Route path='/hire' element={<Hireus/>} exact />
-     {/* <Homepage/> */}
-     </Routes>
-     </UserContext.Provider>
+      <UserContext.Provider value={[username, setUsername]}>
+        <Routes>
+          <Route path="/" element={<Landing />} exact />
+          <Route path="/homepage" element={<Homepage />} exact />
+          <Route path="/about" element={<Aboutus />} exact />
+          <Route path="/hire" element={<Hireus />} exact />
+          {/* <Homepage/> */}
+        </Routes>
+      </UserContext.Provider>
     </>
-  )
+  );
 }
 
 export default App;
-export {UserContext};
+export { UserContext };

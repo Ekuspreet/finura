@@ -1,22 +1,27 @@
-import React from 'react'
-import {Card, CardBody, Image} from "@nextui-org/react";
-const SoftwareBox = ({index, name, url}) => {
+import { Card, CardBody, Image } from "@nextui-org/react";
+import PropTypes from "prop-types";
+
+const SoftwareBox = ({ index, name, url }) => {
   return (
     <div>
-    <Card key={index} className="py-4 px-2 w-fit">
-    
-    <div className=' text-tiny md:text-large font-semibold '>{name}</div>
-    <CardBody className="overflow-visible py-2">
-      <Image
-        alt="Card background"
-        className="object-cover rounded-xl w-20 md:w-36 "
-        src={url}
-        
-      />
-    </CardBody>
-  </Card>
-  </div>
-  )
-}
+      <Card key={index} className="w-fit px-2 py-4">
+        <div className="text-tiny font-semibold md:text-large">{name}</div>
+        <CardBody className="overflow-visible py-2">
+          <Image
+            alt="Card background"
+            className="w-20 rounded-xl object-cover md:w-36"
+            src={url}
+          />
+        </CardBody>
+      </Card>
+    </div>
+  );
+};
 
-export default SoftwareBox
+SoftwareBox.propTypes = {
+  index: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+};
+
+export default SoftwareBox;

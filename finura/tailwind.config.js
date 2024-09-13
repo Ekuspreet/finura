@@ -8,17 +8,13 @@ export default {
   ],
   theme: {
     extend: {
-      colors:{
-        'finuramain':'#59898f',
-        'finuradark':'#5f6e78',
-        'finuracontrast':'#d7ba8f'
-      }
+      colors: {
+        finuramain: "#59898f",
+        finuradark: "#5f6e78",
+        finuracontrast: "#d7ba8f",
+      },
     },
   },
   darkMode: "class",
-  plugins: [
-    nextui(
-      {addCommonColors : true,}
-    ),
-  ],
-}
+  plugins: [nextui({ addCommonColors: true })],
+};

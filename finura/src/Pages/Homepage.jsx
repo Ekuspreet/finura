@@ -2,7 +2,9 @@ import SoftwareBox from "../Components/SoftwareBox";
 import Navigation from "../Components/Navigation";
 import { Image } from "@nextui-org/react";
 import Cookie from "js-cookie";
-import { softwares, Finura } from "../constants";
+import { softwares, Finura, Brand_stories } from "../Contants";
+import StoryCircle from "../Components/StoryCircle";
+
 const Homepage = () => {
   let username = Cookie.get("finura_username");
 
@@ -50,6 +52,19 @@ const Homepage = () => {
               url={software.image_link}
             />
           ))}
+        </div>
+      </div>
+      <div className="Brand-stories flex flex-col items-center gap-4 py-8 text-center">
+        <div className="heading text-xl font-bold text-finuradark md:text-2xl">
+          Brands we have worked with
+        </div>
+
+        <div className="Stories-content flex w-9/12 flex-wrap items-center justify-center gap-5">
+          {Brand_stories.map(
+            (brand, index) => (
+              console.log(brand), (<StoryCircle brand={brand} key={index} />)
+            )
+          )}
         </div>
       </div>
     </div>

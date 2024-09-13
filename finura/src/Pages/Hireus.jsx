@@ -30,7 +30,10 @@ const Hireus = () => {
 
       // Check if the parsed value is a valid number
       if (!isNaN(numericValue)) {
-        setFormData((formData) => ({ ...formData, [name]: numericValue }));
+        setFormData((formData) => ({
+          ...formData,
+          [name]: numericValue,
+        }));
       } else {
         // Handle the case where the input is not a valid number (e.g., set to an empty string)
         setFormData((formData) => ({ ...formData, [name]: "" }));

@@ -9,9 +9,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <NextUIProvider>
       <BrowserRouter>
-      <main className="light">
-        <App />
-      </main>
+        <main className="light">
+          <App />
+        </main>
       </BrowserRouter>
     </NextUIProvider>
   </React.StrictMode>

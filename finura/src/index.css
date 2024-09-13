@@ -3,18 +3,16 @@
 @tailwind utilities;
 
 :root {
-
-    --font-main: "Red Hat Display", sans-serif;
+  --font-main: "Red Hat Display", sans-serif;
 }
-*{
-    font-family: var(--font-main);
+* {
+  font-family: var(--font-main);
 }
 .font-main {
-    font-family: var(--font-main);
-
+  font-family: var(--font-main);
 }
 
-body{
-    max-width: 1290px;
-    margin: 0 auto;
+body {
+  max-width: 1290px;
+  margin: 0 auto;
 }
